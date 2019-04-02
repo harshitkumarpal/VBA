@@ -1,4 +1,4 @@
-Sub ClosedCheck()
+Sub function_name()
 Application.ScreenUpdating = False
 Dim directory As String
 Dim fileName As String
@@ -98,9 +98,9 @@ ActiveWindow.FreezePanes = True
     Sheets("Sheet1").Select
     Sheets("Sheet1").Name = "ClosedDeduction"
 
-'ClosedCheckDeduction_CheckPayment--------------------------------------
+'next tab--------------------------------------
 
-fileName = Dir(directory & "ClosedCheckDeduction_CheckPayment.csv")
+fileName = Dir(directory & "file_name.csv")
 Workbooks.Open (directory & fileName)
 'ActiveWorkbook.Select
 Set wbcsv = ActiveWorkbook
@@ -189,9 +189,9 @@ ActiveWindow.FreezePanes = True
     Selection.Columns.AutoFit
     Range("A2").Select
     
-ActiveWorkbook.SaveAs outDirectory & "Closed Check and Deduction Payments Canada sun to sat MMM '17.xlsx"
+ActiveWorkbook.SaveAs outDirectory & "Filename MMM '18.xlsx"
 wb.Close
 Application.ScreenUpdating = True
-MsgBox ("Closed Check Payment Report Saved")
+MsgBox ("Report Saved")
 
 End Sub
